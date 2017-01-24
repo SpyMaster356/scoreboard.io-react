@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-import {playerPropType} from "../../../models/players/player.prop-types";
+import {playerPropType} from '../../../state/players/player.prop-types';
 
 const propTypes = {
   rank: PropTypes.number.isRequired,

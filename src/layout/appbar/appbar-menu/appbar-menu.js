@@ -1,8 +1,8 @@
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 
-import {newGame, rematch} from '../../../models/game/game.actions';
-import {createPlayer} from '../../../models/players/player.actions';
+import {newGame, rematch} from '../../../state/game/game.actions';
+import {createPlayer} from '../../../state/players/player.actions';
 
 import {AppbarMenuView} from './appbar-menu.view';
 

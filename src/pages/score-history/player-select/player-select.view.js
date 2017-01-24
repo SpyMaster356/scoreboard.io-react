@@ -4,7 +4,7 @@ import {
   MenuItem,
 } from 'material-ui';
 
-import {playerPropType} from "../../../models/players/player.prop-types";
+import {playerPropType} from "../../../state/players/player.prop-types";
 
 const propTypes = {
   players: PropTypes.arrayOf(playerPropType).isRequired,

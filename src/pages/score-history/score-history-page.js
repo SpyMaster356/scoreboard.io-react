@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
 import {ScoreHistoryPageView} from './score-history-page.view';
-import {setRoundScore} from "../../models/scores/score.actions";
+import {setRoundScore} from "../../state/scores/score.actions";
 
 const propTypes = {};
 

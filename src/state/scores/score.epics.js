@@ -1,10 +1,11 @@
 //rxjs imports
 import { Observable } from 'rxjs';
+import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/mapTo';
 import 'rxjs/add/operator/merge';
-import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/filter'
 
 //vendor imports
 import {combineEpics} from 'redux-observable';
@@ -12,6 +13,8 @@ import {combineEpics} from 'redux-observable';
 //app imports
 import {
   SET_SCORE_REL,
+  REMATCH,
+  NEW_GAME,
 } from '../../action-types';
 import {
   roundEnding,
@@ -27,9 +30,11 @@ function setScoreRelEpic(action$) {
   return Observable.merge(
     setScoreRel$
       .debounceTime(ROUND_LENGTH - ROUND_TRANSITION_TIME)
+      .takeUntil(action$.filter((action) => action.type === REMATCH || action.type === NEW_GAME))
       .mapTo(roundEnding()),
     setScoreRel$
       .debounceTime(ROUND_LENGTH)
+      .takeUntil(action$.filter((action) => action.type === REMATCH || action.type === NEW_GAME))
       .mapTo(roundEnded())
   );
 }

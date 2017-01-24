@@ -1,7 +1,7 @@
 import {combineEpics} from 'redux-observable';
 
-import {scoreEpics} from './models/scores/score.epics';
-import {playerEpics} from './models/players/player.epics';
+import {scoreEpics} from './state/scores/score.epics';
+import {playerEpics} from './state/players/player.epics';
 
 const epics = combineEpics(
   scoreEpics,

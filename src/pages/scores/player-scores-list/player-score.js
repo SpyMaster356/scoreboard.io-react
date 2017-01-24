@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {
   incrementPlayerScore,
   decrementPlayerScore
-} from '../../../models/scores/score.actions';
+} from '../../../state/scores/score.actions';
 
 import {PlayerScoreView} from './player-score.view';
 
