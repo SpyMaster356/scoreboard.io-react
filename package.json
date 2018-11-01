@@ -37,7 +37,7 @@
     "postcss-loader": "1.0.0",
     "promise": "7.1.1",
     "react-dev-utils": "^0.4.2",
-    "recursive-readdir": "2.1.0",
+    "recursive-readdir": "2.2.2",
     "redux-devtools": "^3.3.1",
     "sass-loader": "^4.1.1",
     "strip-ansi": "3.0.1",
