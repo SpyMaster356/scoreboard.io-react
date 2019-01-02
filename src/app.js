@@ -2,7 +2,7 @@
 import React from 'react';
 import {Provider as StoreProvider} from 'react-redux'
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {browserHistory} from "react-router";
+import {browserHistory} from 'react-router';
 
 //redux imports
 import {createStore, applyMiddleware} from 'redux'
@@ -16,9 +16,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {syncHistoryWithStore, routerMiddleware} from 'react-router-redux';
 
 //application imports
-import reducers from './app.reducer';
-import epics from './app.epics';
-import Router from './app.router';
+import reducers from './reducer';
+import epics from './epics';
+import Router from './router';
 
 //asset imports
 import './app.scss';
